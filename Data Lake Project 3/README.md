@@ -19,13 +19,16 @@ The star schema that will be used to optimize queries on song play analysis incl
 ##### Dimension Tables
 `users` - users in the app
     user_id, first_name, last_name, gender, level
+    
 `songs` - songs in music database
-    song_id, title, artist_id, year, duration
+    song_id, title, artist_id, year, duration   
 `artists` - artists in music database
-    artist_id, name, location, latitude, longitude
+    artist_id, name, location, latitude, longitude  
 `time` - timestamps of records in songplays broken down into specific units
     start_time, hour, day, week, month, year, weekday
-    
+
+![image](https://miro.medium.com/max/753/1*K6jMfH2z4ULP7z0QKN-4ag.png)
+
 ### Project Files
 `etl.py` - loads song and log data from S3, transforms files into fact and dimension tables and loads data back to S3 as parquet files
 `dl.cfg` - contains aws credentials
