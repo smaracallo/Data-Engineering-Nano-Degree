@@ -40,3 +40,21 @@ class SqlQueries:
                extract(month from start_time), extract(year from start_time), extract(dayofweek from start_time)
         FROM songplays
     """)
+    
+    check_songs_data = ("""
+        SELECT COUNT(*) FROM public.songs WHERE title IS NULL
+    """)
+    
+    check_artists_data = ("""
+        SELECT COUNT(*) FROM public.artists WHERE name IS NULL
+    """)
+    
+    check_users_data = ("""
+        SELECT COUNT(*) FROM public.users WHERE first_name IS NULL
+    """)
+    
+    check_time_data = ("""
+        SELECT COUNT(*) FROM public.time WHERE hour IS NULL
+    """)
+    
+    check_sql_data = [check_songs_data, check_artists_data, check_users_data, check_time_data]
