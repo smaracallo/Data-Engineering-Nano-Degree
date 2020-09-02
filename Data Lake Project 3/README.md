@@ -30,6 +30,6 @@ The star schema that will be used to optimize queries on song play analysis incl
 ![image](https://miro.medium.com/max/753/1*K6jMfH2z4ULP7z0QKN-4ag.png)
 
 ### Project Files
-`etl.py` - loads song and log data from S3, transforms files into fact and dimension tables and loads data back to S3 as parquet files
-`dl.cfg` - contains aws credentials
+`etl.py` - loads song and log data from S3, transforms files into fact and dimension tables and loads data back to S3 as parquet files\
+`dl.cfg` - contains aws credentials\
 `sql_queries.py` - contains queries that extract columns from song and log files to be loaded to S3
